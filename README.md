@@ -73,13 +73,13 @@ MongoDB (local ou via MongoDB Atlas)
 
 | Recurso | Método | Rota | Descrição |
 | :--- | :--- | :--- | :--- |
-| **Usuários** | `POST` | `/api/users` | Cadastra um novo usuário (nome não pode ser duplicado). |
-| | `GET` | `/api/users` | Lista todos os usuários cadastrados. |
-| **Autores** | `POST` | `/api/authors` | Cadastra um novo autor (nome não pode ser duplicado). |
-| | `GET` | `/api/authors` | Lista todos os autores cadastrados. |
-| **Livros** | `POST` | `/api/books` | Cadastra um livro vinculado a um autor existente. |
-| | `GET` | `/api/books` | Lista todos os livros cadastrados. |
-| **Empréstimos** | `POST` | `/api/loans` | Cria um registro de empréstimo. Requer o ID do livro e do usuário. |
+| **Usuários** | `POST` | `/users` | Cadastra um novo usuário (nome não pode ser duplicado). |
+| | `GET` | `/users` | Lista todos os usuários cadastrados. |
+| **Autores** | `POST` | `/authors` | Cadastra um novo autor (nome não pode ser duplicado). |
+| | `GET` | `/authors` | Lista todos os autores cadastrados. |
+| **Livros** | `POST` | `/books` | Cadastra um livro vinculado a um autor existente. |
+| | `GET` | `/books` | Lista todos os livros cadastrados. |
+| **Empréstimos** | `POST` | `/loans` | Cria um registro de empréstimo. Requer o ID do livro e do usuário. |
 
 ## 7. Regra de Negócio de Empréstimo
 
