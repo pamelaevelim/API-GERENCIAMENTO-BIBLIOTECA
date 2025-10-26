@@ -1,0 +1,56 @@
+### 1. Cadastrar Autor
+POST http://localhost:3333/authors
+Content-Type: application/json
+
+{
+    "name": "Clarice Lispector",
+    "birthDate": "1920-12-10",
+    "sex": "Female",
+    "writingGenre": "Fiction"
+}
+
+### 2. Cadastrar Usuário
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "João Pereira",
+    "birthDate": "1985-07-22",
+    "sex": "Male",
+    "address": "Av. Brasil, 456, Bairro Jardim, São Paulo/SP"
+}
+
+### 3. Cadastrar Livro
+# Substitua "authorId" pelo ObjectID do autor cadastrado
+POST http://localhost:3333/books
+Content-Type: application/json
+
+{
+    "title": "Perto do Coração Selvagem",
+    "synopsis": "Romance introspectivo sobre a vida e sentimentos de uma jovem.",
+    "year": 1943,
+    "authorId": "68fdb12ac4107a5218749050"
+}
+
+### 4. Listar Autores
+GET http://localhost:3333/authors
+
+### 5. Listar Usuários
+GET http://localhost:3333/users
+
+### 6. Listar Livros
+GET http://localhost:3333/books
+
+### 7. Realizar Empréstimo
+# Substitua "bookId" e "userId" pelos IDs corretos
+POST http://localhost:3333/loans
+Content-Type: application/json
+
+{
+    "bookId": "68fdb22bc4107a5218749061",
+    "userId": "68fdb1fbc4107a5218749058"
+}
+
+### 8. Resetar banco de dados
+# Limpa todas as coleções e prepara para novos testes
+npm run collections
